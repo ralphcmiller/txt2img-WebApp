@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Input Example</title>
+  <style>
+    /* Center the form on the page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    /* Style the form elements */
+    form {
+      display: flex;
+      align-items: center;
+    }
+    
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px 0 0 5px;
+    }
+    
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" id="inputText" placeholder="Enter text">
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the input value
+      var inputValue = document.getElementById("inputText").value;
+
+      // Do something with the input value (e.g., save it to a variable)
+      var savedValue = inputValue;
+      console.log("Input value:", savedValue);
+      
+      // You can perform further operations with the savedValue variable here
+
+      // Reset the form
+      document.getElementById("myForm").reset();
+    });
+  </script>
+</body>
+</html>
